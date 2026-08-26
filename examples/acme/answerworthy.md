@@ -1,6 +1,6 @@
 ---
 answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
 subject: "Acme Analytics GmbH"
 website: "https://acme.example/"
 updated: 2026-08-14
