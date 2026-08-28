@@ -1,0 +1,63 @@
+name: Publish Standard 1.0 correction
+
+on:
+  push:
+    branches: [fix/publish-answerworthy-1.0]
+
+permissions:
+  contents: write
+
+jobs:
+  correct-release-identity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/publish-answerworthy-1.0
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Correct release identity and canonical source
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          files = [
+              Path('README.md'),
+              Path('template/answerworthy.md'),
+              Path('examples/acme/answerworthy.md'),
+          ]
+          replacements = {
+              'This repository is the working draft of Answerworthy 1.0.': 'Answerworthy 1.0 is the current specification. It is open for implementation and maintained through this repository.',
+              'answerworthy: "1.0-draft"': 'answerworthy: "1.0"',
+              'standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"': 'standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"',
+          }
+
+          for path in files:
+              text = path.read_text()
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+              path.write_text(text)
+
+          combined = '\n'.join(path.read_text() for path in files)
+          assert 'working draft' not in combined.lower()
+          assert '1.0-draft' not in combined
+          assert 'raw.githubusercontent.com/kosmopteros/answerworthy.md' not in combined
+          for path in files:
+              text = path.read_text()
+              assert 'answerworthy: "1.0"' in text
+              assert 'standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"' in text
+          PY
+      - run: node --test tests/*.test.mjs
+      - name: Commit the correction
+        run: |
+          if git diff --quiet; then
+            echo "Release identity is already correct."
+            exit 0
+          fi
+          git config user.name "Alexander Pichugin"
+          git config user.email "113478545+kosmopteros@users.noreply.github.com"
+          git add README.md template/answerworthy.md examples/acme/answerworthy.md
+          git commit -m "fix: publish Answerworthy 1.0 as the current Standard"
+          git push origin HEAD:fix/publish-answerworthy-1.0
