@@ -1,6 +1,6 @@
 ---
-answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
+answerworthy: "1.0"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
 ---
 
 ## Sources

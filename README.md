@@ -4,7 +4,7 @@
 
 SEO makes you findable. GEO makes you citable. **Answerworthy makes you choosable for the right buyer, for reasons the evidence supports.**
 
-This repository is the working draft of Answerworthy 1.0.
+Answerworthy 1.0 is the current specification. It is open for implementation and maintained through this repository.
 
 ## Quick start
 
@@ -59,8 +59,8 @@ The fixed section order is:
 
 ```markdown
 ---
-answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
+answerworthy: "1.0"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
 ---
 
 ## Sources
