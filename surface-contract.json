@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "answerworthy-surface-contract-v1",
+  "release": "2026-09-12",
+  "standard": {
+    "name": "Answerworthy Standard",
+    "version": "1.0",
+    "repository": "https://github.com/answerworthy/answerworthy.md",
+    "rawUrl": "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md",
+    "headline": "Make your business easier to find, understand and choose.",
+    "description": "Give the free Answerworthy Standard to a capable agent. Investigate your public presence, prepare practical improvements and keep the work in a portable file that you or another agent can continue.",
+    "requiresPaidPlan": false,
+    "cta": "Use the free Standard"
+  },
+  "read": {
+    "name": "Answerworthy Read",
+    "headline": "Start with useful work for your business.",
+    "description": "A free application of the complete open Standard within the inspected scope, with actionable guidance, a portable answerworthy.md and a genuine selected insight from additional Plan work when available.",
+    "includesActions": true,
+    "cta": "Get your free Read"
+  },
+  "plan": {
+    "name": "Answerworthy Plan",
+    "headline": "A practical plan to grow your business organically.",
+    "description": "Find where your next customers could come from, what will help them trust and choose you, and which marketing moves deserve your effort. Get a one-time, business-specific analysis with concrete recommendations and prepared materials for earning reach and commercial opportunities without relying on more ad spending.",
+    "purchase": "one-time",
+    "outcomes": ["qualified organic reach", "customer confidence", "enquiries or purchases", "clear and durable communications"],
+    "requiresStandardDefect": false,
+    "ownerRole": "Confirm the business facts and approve the prepared work. Your team or agent can put the recommendations into practice.",
+    "cta": "Get your Answerworthy Plan"
+  },
+  "relationship": "The Plan uses the open Standard alongside broader business and market research, commercial judgment and hands-on preparation. The Standard remains complete and usable without buying the Plan.",
+  "planningPurpose": "Develop a business-specific course of action for organic growth. Understand the business objective, existing offer, audience, strengths and assets. Research worthwhile ways to earn qualified attention, customer confidence and enquiries or purchases. Select and prepare the marketing work that best serves the objective, explaining the audience, opportunity, priorities and how to assess the response. Use the Standard as one input to that judgment; opportunities do not require a Standard deficiency.",
+  "delivery": {
+    "planIntro": "This is your one-time organic-growth Plan: the opportunities worth pursuing, the marketing moves we recommend and the prepared materials to put them into practice.",
+    "readIntro": "This Read applies the complete open Standard within the inspected scope. Start with the useful actions and materials below; keep the supporting findings for reference.",
+    "howToUse": "Review the recommended direction and prepared materials. Confirm the remaining business facts, approve the next actions and give the work to your team or agent. Check implementation first, then observe the customer response."
+  }
+}

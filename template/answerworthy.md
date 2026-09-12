@@ -1,6 +1,6 @@
 ---
-answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
+answerworthy: "1.0"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
 ---
 
 ## Sources
@@ -9,7 +9,7 @@ None yet.
 
 ## Scope
 
-Unknown.
+Business objective, operating context and workstream not established yet.
 
 ## Outcomes
 
@@ -21,9 +21,8 @@ Not assessed.
 
 ## Actions
 
-- **Start here:** read the Standard, inspect any business material already available, and bootstrap this file. If none is available, ask for one useful source: a URL, deck, presentation, document, PDF, product page, profile, repository, or similar.
+Read the Standard and inspect useful business material already available. If none is available, ask for one source. Select a worthwhile bounded workstream, prepare or perform its next useful operation, and keep its material and continuation here.
 
 ## Maintenance
 
-- Re-read the current Standard whenever work resumes.
-- Keep only business-specific sources, scope, Outcomes, evidence-grounded State, unresolved material questions, and next Actions here.
+Record the Standard revision used for the session. Review the living source when resuming, without silently rewriting historical interpretations or permissions. Keep the business-specific work, its sources and its next operation usable by another agent or person.

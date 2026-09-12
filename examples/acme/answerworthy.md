@@ -1,229 +1,167 @@
 ---
-answerworthy: "1.0-draft"
-standard: "https://raw.githubusercontent.com/kosmopteros/answerworthy.md/main/README.md"
-subject: "Acme Analytics GmbH"
+answerworthy: "1.0"
+standard: "https://raw.githubusercontent.com/answerworthy/answerworthy.md/main/README.md"
+subject: "Acme Analytics GmbH — fictional worked example"
 website: "https://acme.example/"
-updated: 2026-08-14
+updated: 2026-09-12
 ---
 
 ## Sources
 
-- `https://acme.example/` — public; homepage, product, pricing, and documentation inspected 2026-08-14
-- `Acme-sales-deck.pdf` — private; supplied by Acme and inspected 2026-08-14
-- `https://reviews.example/acme` — public; inspected 2026-08-14
-- `OBS-QF1-2026-08-14` — private observation log containing retained assistant outputs
+Use the [self-contained fictional source pack](materials.md). These are supplied teaching fixtures, not real web captures or measured customer results.
+
+- SRC-1: private owner brief, objective and preparation permission.
+- SRC-2: public product-guide fixture; roles, German hosting and workflow boundary.
+- SRC-3: public trial-page fixture; existing /trial route, fields and no payment at request.
+- SRC-4: public partner-invitation fixture; contribution format, not editorial acceptance.
 
 ## Scope
 
-- coverage: full
-- market: Germany
-- language: de-DE
-- buyers: small regulated teams choosing analytics software without a dedicated compliance specialist
-  - provenance: researched
-- alternatives:
-  - BigDash — provenance: observed
-  - MetricsCo — provenance: researched
-- non-fit: enterprises requiring governance controls Acme does not provide
-  - provenance: supplied
+- objective: increase suitable trial enquiries — supplied, SRC-1
+- workstream: connect useful existing explanations to the trial choice and prepare a distribution contribution — inferred from SRC-1–SRC-4
+- effort: one preparation session; publication and contact are separate — supplied, SRC-1
+- buyers: small German teams evaluating shared analytics — supplied, SRC-1
+- market: Germany; language: de-DE — supplied, SRC-1
+- assets: preserve the existing headline and guide; reuse role explanations — observed in SRC-2
+- alternative: continue the current reporting process — inferred, not an inspected competing product
+- material non-fit: organisation-wide approval workflows are required — observed in SRC-2
+- coverage: bounded to the fixture; actual search visibility and broader competitors uninspected
 
-### QF1 — choose analytics software for a small regulated team without dedicated compliance staff
+### QF1 — Is Acme suitable for our analytics responsibilities?
 
-- decision: select an analytics product the team can deploy and govern with limited internal compliance expertise
-- provenance: researched
-- query variants:
-  - "Welche Analytics-Lösung eignet sich für ein kleines reguliertes Team ohne Compliance-Spezialisten?" — provenance: researched
-  - "einfache datenschutzkonforme Analytics für kleines Team" — provenance: inferred
-- material criteria:
-  - supported controls and regulatory context — provenance: researched
-  - deployment and onboarding effort — provenance: supplied
-  - team size and expertise required — provenance: researched
-  - pricing and contractual commitment — provenance: observed
-  - limitations against enterprise alternatives — provenance: inferred
+provenance: inferred
+sources: [SRC-1, SRC-2, SRC-3]
+criteria: who configures collection, who reads reports, hosting location, required approval workflows
 
 ## Outcomes
 
-- **O1 — QF1:** An answering system can correctly determine whether Acme is a defensible fit over BigDash and MetricsCo for a small regulated German team, and support every consequential stated reason from the public corpus.
-- **O2 — QF1:** When a buyer requires enterprise governance controls Acme does not provide, an answering system does not present Acme as the better fit.
-- **O3 — QF1:** If an answering system mentions Acme's onboarding-time advantage, it states the supported scope and limits rather than repeating "40%" as a universal fact.
+- **O1 — QF1:** The team can understand responsibilities and take the appropriate trial-request step. This serves the objective of suitable trial enquiries.
+- **O2 — QF1:** A team requiring organisation-wide approval workflows recognises that the current product does not include them before requesting a trial.
 
 ## State
 
-### S1 — Access to decision-useful commercial information
-
-condition: reachable
-state: verified
-evidence:
-  - homepage, product, pricing, and documentation were reachable without an access challenge through the declared Web test paths — verified 2026-08-14
-  - decision-useful product and pricing information was present in the fetched content — verified 2026-08-14
-
-### S2 — Company identity across public profiles
-
-condition: identified
-state: incomplete
-evidence:
-  - website and review profile use the same company and product names — checked 2026-08-14
-  - two other known profiles require account access unavailable to this assessment
-needed:
-  - inspect the remaining profiles for legal entity, product, and location consistency
-
-### S3 — Comparative fit behind the homepage compression
-
+### S1 — Existing role explanation
 condition: understood
-state: incomplete
-compression: "compliance without complexity"
-evidence:
-  - the phrase is a useful concise proposition for people, but no public decision-grade expansion states which controls, workflows, team sizes, or trade-offs make Acme a stronger fit than BigDash or MetricsCo
-  - the private deck states that Acme is not intended for enterprise governance, but this boundary is absent from the public corpus
-needed:
-  - Acme-validated fit, trade-offs, constraints, and non-fit against both alternatives
-  - a public expansion that preserves rather than materially revises the impression created by "compliance without complexity"
-  - public wording supported by evidence
+coverage: bounded
+state: verified
+evidence: SRC-2 explains administrators, viewers and the configuration walkthrough. Preserve it.
 
-### S4 — QF1 coverage in de-DE
-
+### S2 — Trial-page connection
 condition: answering
-state: missing
-evidence:
-  - no inspected de-DE surface answers QF1 across the material criteria — checked 2026-08-14
-needed:
-  - decision-useful QF1 coverage using validated fit, terms, trade-offs, and limits
-  - a discoverable route from relevant commercial pages
+coverage: bounded
+state: incomplete
+evidence: SRC-3 links the guide but does not summarise the roles or approval-workflow boundary.
+needed: prepared in A1; publication is A2.
 
-### S5 — Homepage onboarding claim
+### S3 — Included implementation call
+condition: understood
+coverage: bounded
+state: unreached
+evidence: SRC-1 explicitly leaves this term unresolved.
+needed: owner answer only for a statement about an included call.
 
-condition: evidenced
-state: unsupported
-claim: "Reduces onboarding time by 40%"
-evidence:
-  - claim visible at https://acme.example/product — inspected 2026-08-14
-  - the private deck repeats the figure but contains no method, baseline, sample, or limits
-needed:
-  - evidence appropriate to a comparative timing claim: baseline, method, sample, scope, date, limits, and exceptions
-  - public wording no stronger than the retained evidence
-
-### S6 — Independent support for small-team fit
-
-condition: corroborated
-state: missing
-evidence:
-  - the public review profile contains two ratings but no decision-relevant text about regulated small-team fit
-  - two partner pages repeat Acme's product copy without independent observation
-needed:
-  - an independent source that establishes a decision-relevant fact from its own evidence or experience
-
-### S7 — Decision evidence across relevant German surfaces
-
+### S4 — Partner contribution
 condition: distributed
+coverage: bounded
 state: incomplete
-evidence:
-  - Acme is present on one review platform and two partner sites
-  - none of those surfaces carries evidence about QF1 fit, onboarding, or non-fit
-needed:
-  - validated decision-useful information on surfaces buyers in this scope actually use
+evidence: SRC-4 documents a relevant format. No submission or acceptance has occurred.
+needed: prepared contribution, publication/contact approval and actual submission route.
 
-### S8 — QF1 assistant observation
-
+### S5 — Answering-system response
 condition: observed
-state: incomplete
-query: "Welche Analytics-Lösung eignet sich für ein kleines reguliertes Team ohne Compliance-Spezialisten?"
-provider: "<retained in observation log>"
-model: unreached
-mode: search-enabled
-observed_at: 2026-08-14T14:00:00+02:00
-locale: de-DE
-context: "fresh session; Germany; no account personalisation; no preceding conversation"
-runs: 1
-position: mentioned
-representation: incomplete
-fit: uncertain
-stated_reasons:
-  - "Acme may suit smaller teams because it is simpler to deploy."
-reason_support: unsupported
-evidence_ref:
-  - `OBS-QF1-2026-08-14`
-needed:
-  - repeated observations under declared conditions
-  - comparison of each stated reason against the inspected public corpus
+coverage: uncovered
+state: unreached
+needed: a separately authorised observation; no provider result is claimed in this example.
+
+Reachable, Identified, Evidenced and Corroborated are outside this exercise's full assessment. This is not a claim of full conformance or organic growth.
 
 ## Actions
 
-### A1 — Validate Acme's QF1 fit and non-fit
-
+### A1 — Prepare the team-fit passage
 advances: [O1, O2]
-serves: [understood, evidenced]
-state: waiting-human
-needs: [human]
-why: the public corpus cannot support a correct comparative decision until Acme validates which differences matter and where they stop applying
-done_when:
-  - decision-relevant differences, trade-offs, constraints, and exclusions are documented against BigDash and MetricsCo
-  - each consequential distinction has evidence or remains explicitly unsupported
-  - Acme approves the business-side facts and boundaries
-verify:
-  - compare every approved statement with retained evidence
-  - test whether the same facts support O1 and reject Acme under O2
+serves: [understood, answering]
+state: done
+needs: [agent]
+operation: prepare a trial-page passage
+prerequisites: []
+why: put existing useful distinctions beside the trial decision without replacing the brand or duplicating its documentation
+done_when: the populated passage and placement instruction are ready for factual review
+verify: compare product statements with SRC-2/SRC-3; omit an included-call statement while S3 is unresolved
+next_operation: A2
 
-### A2 — Resolve the onboarding-time claim
+#### Prepared material
 
-advances: [O3]
-serves: [evidenced]
-state: waiting-human
-needs: [human]
-why: "40%" can change a buying decision and is currently unsupported
-done_when:
-  - Acme publishes sufficient evidence, narrows the claim to what the evidence supports, or removes it
-verify:
-  - refetch the claim and evidence
-  - repeat the affected QF1 observation and inspect the stated reasons
+Place beside the trial action. Link “Produktleitfaden” to the existing guide; keep the existing headline.
 
-### A3 — Create the decision-grade QF1 expansion in de-DE
+> **Passt Acme zu Ihrem Team?**
+>
+> Mit Acme erfassen Sie Website-Ereignisse und betrachten sie in gemeinsamen Dashboards. Administratoren richten die Datenerfassung und den Teamzugriff ein. Viewer lesen die Dashboards, ohne die Erfassungseinstellungen zu verändern.
+>
+> Die Daten dieses Angebots werden in Deutschland gehostet. Organisationsweite Freigabeworkflows gehören derzeit nicht zum Produkt. Im Produktleitfaden finden Sie die Rollen und die Einrichtung im Detail.
+>
+> **Testzugang anfragen**
+>
+> Beschreiben Sie im Formular kurz Ihren Anwendungsfall. Für die Anfrage ist keine Zahlung erforderlich.
 
+The passage is prepared, not published. Its product facts come from SRC-2/SRC-3.
+
+### A2 — Approve and publish A1
 advances: [O1, O2]
-serves: [understood, answering, evidenced]
-state: blocked
-needs: [agent, human]
-why: the concise proposition may remain concise; the missing work is a public explanation of the fit, terms, trade-offs, and limits, but publishing before A1 and A2 would make unsupported positioning more legible
-done_when:
-  - the public corpus covers QF1 using approved distinctions, terms, trade-offs, and limits
-  - the expansion preserves rather than materially revises the impression created by the concise proposition
-  - the explanation remains intelligible when encountered away from its original page
-  - relevant commercial pages provide a discoverable route to it without becoming unnecessarily verbose
-verify:
-  - refetch the published material
-  - compare the compression with the expanded explanation for consistency
-  - re-observe O1 and O2 under the declared test conditions
+serves: [understood, answering]
+state: waiting-human
+needs: [human, agent]
+operation: obtain approval for this passage, then edit the existing page
+prerequisites: [owner publication approval]
+prepared_material: A1 in this file
+why: SRC-1 authorises preparation, not publication
+done_when: the approved passage is visible and its guide link works
+verify: inspect the rendered page and permitted form navigation without submitting customer data
+next_operation: record publication; observe relevant enquiries separately
 
-### A4 — Establish genuine independent corroboration
-
+### A3 — Prepare the partner contribution
 advances: [O1]
-serves: [corroborated, distributed]
-state: waiting-third-party
-needs: [human, third-party]
-why: the claimed small-team fit currently exists only as self-description
-done_when:
-  - an appropriate independent source publishes a decision-relevant fact from its own evidence or experience
-  - no incentive, scripting, or editorial control compromises independence
-verify:
-  - inspect the source and its provenance
-  - confirm the public claim is no stronger than the source supports
-
-### A5 — Complete the QF1 observation baseline
-
-advances: [O1, O2, O3]
-serves: [observed]
+serves: [distributed, answering]
 state: ready
 needs: [agent]
-why: one answer under one condition cannot establish a stable output pattern
-done_when:
-  - QF1 and non-fit questions are observed across the declared providers, modes, and repeated fresh sessions
-  - every run retains date, locale, context, position, representation, fit, stated reasons, and evidence reference
-verify:
-  - repeat the protocol after A1–A4 materially change the public corpus
-  - compare whether the Outcomes moved and whether the changed reasons are supportable
+operation: draft from the populated structure below
+prerequisites: []
+why: the documented partner format can introduce the existing explanation to small-team readers; acceptance remains the editor's decision
+done_when: the contribution is ready for owner review
+verify: attribute the product example, distinguish explanatory judgment from measurements, and retain the editorial boundary
+next_operation: obtain owner approval and the actual submission route
+
+#### Prepared material
+
+**Title:** “Wer richtet Analytics ein, und wer braucht nur die Ergebnisse?”
+
+**Opening:** Explain how separating configuration from reading results can help a team evaluate a shared reporting tool. Present this as practical judgment, not a measured campaign result.
+
+**Responsibility worksheet:** Supply columns for task, responsible person and required access. Include collection settings, access decisions and dashboard reading.
+
+**Worked example:** Use Acme's documented administrator/viewer split and link its configuration walkthrough, clearly attributed. Other products may also separate roles.
+
+**Before a trial:** Ask readers to identify required approval workflows and who will configure collection. State the current Acme workflow boundary from SRC-2.
+
+**Closing:** Invite readers to use the worksheet with their current process or prospective product. Offer the Acme guide as the vendor-authored example, subject to partner review.
+
+This is a populated structure for independent drafting. It does not depend on an included-call answer or authorise contact.
+
+### A4 — Resolve the optional call statement
+advances: [O1]
+serves: [understood]
+state: waiting-human
+needs: [human]
+operation: confirm an offer term
+prerequisites: [owner answer]
+question: Is an implementation call included, optional on request, or not offered?
+why: only a proposed call statement depends on this answer
+done_when: record the answer as supplied knowledge and prepare any resulting wording
+verify: compare that wording with the confirmed term before seeking publication approval
 
 ## Maintenance
 
-- Re-read the current Standard whenever work resumes.
-- Re-check when the offer, public corpus, or German market changes materially, or after 30 days.
-- Re-verify done Actions before relying on them again.
-- Revisit inferred Scope premises when new buyer or market evidence appears.
-- Keep raw observations outside this file under stable evidence references.
+- A1 is prepared; A2 awaits approval; A3 is ready; A4 is the only unresolved offer question.
+- Continue with A3 unless new permission or a changed objective changes the next operation. Reuse A1 directly; do not ask the owner to recreate it.
+- No page was published, partner contacted, enquiry generated or answering-system result observed in this exercise.
+- Record the Standard revision used, review its living source on resumption, and reconcile changes explicitly.
+- Recheck facts when the roles, hosting, trial offer or workflow support change.
